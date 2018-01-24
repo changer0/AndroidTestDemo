@@ -6,10 +6,9 @@ import org.junit.rules.ExpectedException;
 
 /**
  * Created by zhanglulu on 2018/1/24.
+ * JUnit Rules
  */
-
 public class RuleExceptionTesterExample {
-
     @Rule
     public ExpectedException exception = ExpectedException.none();
 
