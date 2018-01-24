@@ -1,19 +1,17 @@
 package com.lulu.androidtestdemo;
 
 import org.junit.Before;
+import org.junit.FixMethodOrder;
 import org.junit.Ignore;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.junit.runners.Suite;
+import org.junit.runners.MethodSorters;
 
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by lulu on 2018/1/20.
  */
-@RunWith(Suite.class)
-@Suite.SuiteClasses({
-        MyClassTest.class})
+@FixMethodOrder(MethodSorters.DEFAULT)
 public class CalculatorTest {
 
     Calculator mCalculator;
@@ -36,7 +34,7 @@ public class CalculatorTest {
    @Test
     public void multiply() throws Exception {
         int sum = mCalculator.multiply(1, 2);
-        assertEquals(23, sum);
+        assertEquals(2, sum);
        System.out.println("multiply执行了");
     }
 
