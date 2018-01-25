@@ -7,30 +7,33 @@ import org.junit.runners.model.Statement;
 /**
  * Created by zhanglulu on 2018/1/24.
  */
-
-public class MyCustomRule implements TestRule {
+public class LoopRule implements TestRule {
     private Statement base;
     private Description description;
+    private int loopCount;
+
+    public LoopRule(int loopCount) {
+        this.loopCount = loopCount;
+    }
 
     @Override
     public Statement apply(Statement base, Description description) {
         this.base = base;
         this.description = description;
-        return new MyStatement(base);
+        return new LoopStatement(base);
     }
 
-    public class MyStatement extends Statement {
+    public class LoopStatement extends Statement {
         private final Statement base;
-        public MyStatement(Statement base) {
+        public LoopStatement(Statement base) {
             this.base = base;
         }
         @Override
         public void evaluate() throws Throwable {
-            System.out.println(description.getMethodName() + " -> Started");
-            try {
+            for (int i = 0; i < loopCount; i++) {
+                System.out.println("Loop " + i + " Started");
                 base.evaluate();
-            } finally {
-                System.out.println(description.getMethodName() + " -> Finished");
+                System.out.println("Loop " + i + " Finished");
             }
         }
     }

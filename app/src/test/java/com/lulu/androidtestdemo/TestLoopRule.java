@@ -7,13 +7,12 @@ import org.junit.Test;
  * Created by zhanglulu on 2018/1/24.
  */
 
-public class TestMyCustomRule {
+public class TestLoopRule {
     @Rule
-    public MyCustomRule customRule = new MyCustomRule();
+    public LoopRule customRule = new LoopRule(3);
 
     @Test
     public void testMyCustomRule() {
-//        customRule
-        System.out.println("执行testMyCustomRule");
+        System.out.println("execute testMyCustomRule");
     }
 }
