@@ -1,5 +1,7 @@
 package com.lulu.androidtestdemo;
 
+import com.lulu.androidtestdemo.junit.testexample.Calculator;
+
 import org.junit.Before;
 import org.junit.FixMethodOrder;
 import org.junit.Ignore;

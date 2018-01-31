@@ -20,6 +20,7 @@ public class LoopRule implements TestRule {
     public Statement apply(Statement base, Description description) {
         this.base = base;
         this.description = description;
+        System.out.println("apply");
         return new LoopStatement(base);
     }
 

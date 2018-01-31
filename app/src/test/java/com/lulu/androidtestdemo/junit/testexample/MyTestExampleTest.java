@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo.testexample;
+package com.lulu.androidtestdemo.junit.testexample;
 
 import org.junit.Test;
 
