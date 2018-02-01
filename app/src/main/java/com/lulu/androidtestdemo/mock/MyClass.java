@@ -8,4 +8,12 @@ public class MyClass {
     public int getUniqueId() {
         return 10;
     }
+
+    public void testing(int i) {
+
+    }
+
+    public void someMethod(String s) {
+
+    }
 }
