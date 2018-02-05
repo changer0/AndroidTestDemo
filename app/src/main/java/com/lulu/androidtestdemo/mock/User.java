@@ -5,6 +5,11 @@ package com.lulu.androidtestdemo.mock;
  */
 
 class User {
+    private int mId;
+
+    public int getId() {
+        return mId;
+    }
 //    @Override
 //    public String toString() {
 //        return "this is User";
