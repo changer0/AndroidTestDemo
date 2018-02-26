@@ -15,4 +15,5 @@ public class TestLoopRule {
     public void testMyCustomRule() {
         System.out.println("execute testMyCustomRule");
     }
+
 }
