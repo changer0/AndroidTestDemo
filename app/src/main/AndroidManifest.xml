@@ -22,7 +22,13 @@
         <service
             android:name=".MyService"
             android:enabled="true"
-            android:exported="true"></service>
+            android:exported="true" />
+
+        <provider
+            android:name=".BookProvider"
+            android:authorities="com.lulu.androidtestdemo.bookprovider" />
+
+        <activity android:name=".ProviderActivity"></activity>
     </application>
 
 </manifest>

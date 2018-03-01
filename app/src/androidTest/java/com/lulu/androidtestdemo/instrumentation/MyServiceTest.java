@@ -1,10 +1,12 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.instrumentation;
 
 import android.content.Intent;
 import android.os.IBinder;
 import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ServiceTestRule;
 import android.support.test.runner.AndroidJUnit4;
+
+import com.lulu.androidtestdemo.MyService;
 
 import org.junit.Rule;
 import org.junit.Test;

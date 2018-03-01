@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <array name="bookshelf_import_title">
+        <item>云书架</item>
+        <item>导入本地书</item>
+    </array>
+
+</resources>

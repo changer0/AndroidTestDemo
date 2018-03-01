@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.util.Log;
 
 import com.lulu.androidtestdemo.MainActivity;
-import com.lulu.androidtestdemo.MyService;
 
 /**
  * Created by zhanglulu on 2018/2/26.

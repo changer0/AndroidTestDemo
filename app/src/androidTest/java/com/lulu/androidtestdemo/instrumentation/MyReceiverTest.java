@@ -1,15 +1,9 @@
 package com.lulu.androidtestdemo.instrumentation;
 
-import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.ProviderTestCase2;
 
-import com.lulu.androidtestdemo.MyService;
-
-import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,8 +22,7 @@ import static org.mockito.Mockito.verify;
 @RunWith(AndroidJUnit4.class)
 public class MyReceiverTest {
 
-
-    public MyReceiver mReceiver = new MyReceiver();
+    MyReceiver mReceiver = new MyReceiver();
 
     @Mock
     public Context mContext;

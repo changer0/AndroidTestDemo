@@ -17,7 +17,7 @@ public class MyService extends Service {
         return new MyLocalBinder();
     }
 
-    class MyLocalBinder extends Binder {
+    public class MyLocalBinder extends Binder {
         public MyService getMyService() {
             return MyService.this;
         }
@@ -30,5 +30,4 @@ public class MyService extends Service {
     public String doSomethingToReturnTest() {
         return "Test";
     }
-
 }
