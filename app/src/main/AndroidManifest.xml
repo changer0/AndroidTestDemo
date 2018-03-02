@@ -28,7 +28,13 @@
             android:name=".BookProvider"
             android:authorities="com.lulu.androidtestdemo.bookprovider" />
 
-        <activity android:name=".ProviderActivity"></activity>
+        <activity android:name=".ProviderActivity" />
+
+        <provider
+            android:name=".instrumentation.MyContentProvider"
+            android:authorities="com.lulu.androidtestdemo.MyContentProvider"
+            android:enabled="true"
+            android:exported="true"/>
     </application>
 
 </manifest>

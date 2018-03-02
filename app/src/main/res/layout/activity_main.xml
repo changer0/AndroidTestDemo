@@ -17,10 +17,18 @@
         <!--app:layout_constraintRight_toRightOf="parent"-->
         <!--app:layout_constraintTop_toTopOf="parent"/>-->
 
+
     <Button
-        android:id="@+id/changeTextBt"
-        android:text="changeTextBt"
-        android:onClick="onChangeClick"
+        android:id="@+id/insert"
+        android:text="insert"
+        android:onClick="onInsertClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/query"
+        android:text="query"
+        android:onClick="onQueryClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 

@@ -1,13 +1,19 @@
 package com.lulu.androidtestdemo;
 
-import android.support.v7.app.AlertDialog;
+import android.content.ContentResolver;
+import android.content.ContentValues;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.CallLog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.lulu.androidtestdemo.instrumentation.MyContentProvider;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivityTest";
@@ -17,36 +23,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-//        listView = findViewById(R.id.listview);
-//        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this,
-//                android.R.layout.simple_list_item_1,
-//                android.R.id.text1,
-//                new String[]{"测试1", "测试2", "测试3", "测试4", "测试5"});
-//        listView.setAdapter(arrayAdapter);
-
     }
 
-    public void onChangeClick(View view) {
-        Toast.makeText(this, view.getId()+"被点击了", Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "onChangeClick: 点击了");
-
-        AlertDialog dialog = new AlertDialog.Builder(this)
-                .setItems(R.array.bookshelf_import_title, (dialogInterface, i) -> {
-                    switch (i) {
-                        //云书架
-                        case 0:
-
-                            break;
-                        //导入本地书
-                        case 1:
-
-                            break;
-                        default:
-                            break;
-                    }
-                })
-                .setNegativeButton("取消", (dialog1, whichButton) -> {
-                }).create();
-        dialog.show();
+    public void onInsertClick(View view) {
+        ContentValues values = new ContentValues();
+        values.put(MyContentProvider.TEST_TABLE_COL_CONTENT, "测试数据" + new Random(System.currentTimeMillis()).nextInt());
+        getContentResolver().insert(MyContentProvider.CONTENT_URI, values);
     }
+
+    public void onQueryClick(View view) {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.JELLY_BEAN) {
+            Cursor cursor = getContentResolver().query(MyContentProvider.CONTENT_URI, null, null, null, null, null);
+            if (cursor != null) {
+                while (cursor.moveToNext()) {
+                    String string = cursor.getString(cursor.getColumnIndex(MyContentProvider.TEST_TABLE_COL_CONTENT));
+                    Toast.makeText(this, string, Toast.LENGTH_SHORT).show();
+                }
+                cursor.close();
+            }
+        }
+    }
+
 }
