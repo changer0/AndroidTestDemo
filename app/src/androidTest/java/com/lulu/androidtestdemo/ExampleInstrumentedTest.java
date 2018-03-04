@@ -24,5 +24,8 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.lulu.androidtestdemo", appContext.getPackageName());
 
+
+
+
     }
 }
