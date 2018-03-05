@@ -25,7 +25,6 @@ public class MyContentProviderTest extends ProviderTestCase2<MyContentProvider>{
 
     public MockContentResolver mMockResolver;
 
-
     public MyContentProviderTest() {
         super(MyContentProvider.class, MyContentProvider.AUTHORITIES);
     }
@@ -37,19 +36,18 @@ public class MyContentProviderTest extends ProviderTestCase2<MyContentProvider>{
         super.setUp();
         mMockResolver = getMockContentResolver();
     }
-
     @Test
     public void insert() throws Exception {
         ContentValues values = new ContentValues();
         values.put(MyContentProvider.TEST_TABLE_COL_CONTENT, "保存测试信息");
         Uri insert = mMockResolver.insert(MyContentProvider.CONTENT_URI, values);
-        Cursor cursor = mMockResolver.query(MyContentProvider.CONTENT_URI, null, null,
+        Cursor cursor = mMockResolver.query(MyContentProvider.CONTENT_URI,
+                null, null,
                 null, null);
-        assertEquals(1, cursor.getCount());
         assertTrue(cursor.moveToNext());
+        assertEquals(1, cursor.getCount());
         String testStr =
                 cursor.getString(cursor.getColumnIndex(MyContentProvider.TEST_TABLE_COL_CONTENT));
         assertEquals(testStr, "保存测试信息");
     }
-
 }

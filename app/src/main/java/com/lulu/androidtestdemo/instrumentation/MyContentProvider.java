@@ -14,11 +14,8 @@ public class MyContentProvider extends ContentProvider {
 
     public static final String AUTHORITIES = "com.lulu.androidtestdemo.MyContentProvider";
     public static final Uri CONTENT_URI = Uri.parse("content://" + AUTHORITIES + "/content");
-
     private SQLiteOpenHelper mDbHelper;
-
     public static final int CODE_TEST = 1;
-
     private static final UriMatcher mUriMatcher;
 
     static{
@@ -28,10 +25,8 @@ public class MyContentProvider extends ContentProvider {
         mUriMatcher.addURI("*", "/content", CODE_TEST);
     }
 
-
     public MyContentProvider() {
     }
-
 
     @Override
     public boolean onCreate() {
@@ -67,20 +62,16 @@ public class MyContentProvider extends ContentProvider {
         }
         return ret;
     }
-
     @Override
     public int delete(Uri uri, String selection, String[] selectionArgs) {
         return 0;
     }
-
     @Override
     public String getType(Uri uri) {
         return null;
     }
-
     @Override
-    public int update(Uri uri, ContentValues values, String selection,
-                      String[] selectionArgs) {
+    public int update(Uri uri, ContentValues values, String selection, String[] selectionArgs) {
        return 0;
     }
 
@@ -91,16 +82,12 @@ public class MyContentProvider extends ContentProvider {
     public static final String TEST_TABLE_NAME = "testTable";
     public static final String TEST_TABLE_COL_CONTENT = "content";
 
-
     public class DbHelper extends SQLiteOpenHelper {
-
-
         private static final String CREATE_TABLE_COST =
                 "create table if not exists " + TEST_TABLE_NAME +
                         "( _id integer primary key autoincrement," +
                         TEST_TABLE_COL_CONTENT + " text" +
                         ")";
-
         public DbHelper(Context context) {
             super(context, "myapp", null, 1);
         }
@@ -109,10 +96,8 @@ public class MyContentProvider extends ContentProvider {
         public void onCreate(SQLiteDatabase db) {
             db.execSQL(CREATE_TABLE_COST);
         }
-
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
         }
     }
 }

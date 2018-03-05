@@ -1,0 +1,68 @@
+
+android {
+    packagingOptions {
+        exclude 'LICENSE.txt'
+    }
+}
+
+
+
+android {
+    // ...
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    // Unit testing dependencies
+    testCompile 'junit:junit:4.12'
+}
+
+
+defaultConfig {
+    //..... more stuff
+testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+}
+
+dependencies {
+    // Unit testing dependencies
+    androidTestCompile 'junit:junit:4.12'
+    // Set this dependency if you want to use the Hamcrest matcher library
+    androidTestCompile 'org.hamcrest:hamcrest-library:1.3'
+    // more stuff, e.g., Mockito
+}
+
+android {
+    /// more
+    testInstrumentationRunner "com.lulu.androidtestdemo.instrumentation.MockTestRunner"
+}
+
+dependencies {
+    // Unit testing dependencies
+    testImplementation 'junit:junit:4.12'
+    // Set this dependency if you want to use the Hamcrest matcher library
+    testImplementation 'org.hamcrest:hamcrest-library:1.3'
+    // more stuff, e.g., Mockito
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    testCompile 'junit:junit:4.12'
+
+    // Android runner and rules support
+    androidTestCompile 'com.android.support.test:runner:1.0.1'
+    androidTestCompile 'com.android.support.test:rules:1.0.1'
+
+    // Espresso support
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    // add this for intent mocking support
+    androidTestCompile 'com.android.support.test.espresso:espresso-intents:3.0.1'
+
+    // add this for webview testing support
+    androidTestCompile 'com.android.support.test.espresso:espresso-web:3.0.1'
+}
