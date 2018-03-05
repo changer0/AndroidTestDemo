@@ -1,6 +1,5 @@
 package com.lulu.androidtestdemo.espresso;
 
-import android.app.Activity;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
