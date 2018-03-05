@@ -11,11 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".SecondActivity" />
 
@@ -34,7 +30,16 @@
             android:name=".instrumentation.MyContentProvider"
             android:authorities="com.lulu.androidtestdemo.MyContentProvider"
             android:enabled="true"
-            android:exported="true"/>
+            android:exported="true" />
+
+        <activity android:name=".espresso.EspressoTest1Activity" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".espresso.EspressoTest2Activity"></activity>
     </application>
 
 </manifest>
