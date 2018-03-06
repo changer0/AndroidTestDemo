@@ -8,5 +8,6 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Large Text"
+        android:onClick="onClick"
         android:id="@+id/resultView" />
 </LinearLayout>

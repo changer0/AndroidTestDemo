@@ -10,9 +10,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".MainActivity" />
         <activity android:name=".SecondActivity" />
 
         <service
@@ -32,14 +30,16 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".espresso.EspressoTest1Activity" >
+        <activity android:name=".espresso.EspressoTest1Activity"></activity>
+        <activity android:name=".espresso.EspressoTest2Activity" />
+        <activity android:name=".espresso.EspressoListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".espresso.EspressoTest2Activity"></activity>
+        <activity android:name=".espresso.TestConfigureActivity"></activity>
     </application>
 
 </manifest>
