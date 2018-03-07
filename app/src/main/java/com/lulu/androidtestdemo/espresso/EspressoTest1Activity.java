@@ -1,6 +1,7 @@
 package com.lulu.androidtestdemo.espresso;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -26,6 +27,8 @@ public class EspressoTest1Activity extends AppCompatActivity {
                 break;
             case R.id.switchActivity:
                 Intent intent = new Intent(this, EspressoTest2Activity.class);
+                intent.setAction(Intent.ACTION_CALL);
+                intent.setData(Uri.parse("123456789"));
                 intent.putExtra("input", editText.getText().toString());
                 startActivity(intent);
                 break;
