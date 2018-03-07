@@ -62,13 +62,13 @@ public class TestConfigureActivityTest {
         final Activity[] activity = new Activity[1];
         InstrumentationRegistry.getInstrumentation().runOnMainSync(() -> {
             Activity currentActivity = null;
-            Collection resumedActivities = ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(RESUMED);
+            Collection resumedActivities =
+                    ActivityLifecycleMonitorRegistry.getInstance().getActivitiesInStage(RESUMED);
             if (resumedActivities.iterator().hasNext()){
                 currentActivity = (Activity) resumedActivities.iterator ().next();
                 activity[0] = currentActivity;
             }
         });
-
         return activity[0];
     }
 

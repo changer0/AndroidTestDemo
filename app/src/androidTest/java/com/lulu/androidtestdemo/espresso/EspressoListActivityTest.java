@@ -17,6 +17,8 @@ import static android.support.test.InstrumentationRegistry.getInstrumentation;
 import static android.support.test.espresso.Espresso.*;
 import static android.support.test.espresso.action.ViewActions.*;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.RootMatchers.withDecorView;
+import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.CoreMatchers.allOf;
@@ -54,6 +56,14 @@ public class EspressoListActivityTest {
                 .perform(click());
         onData(allOf(is(instanceOf(String.class)), is("测试 49")))
                 .perform(click());
+    }
+
+    @Test
+    public void testToast() {
+        onData(allOf(instanceOf(String.class), is("测试 20"))).perform(click());
+        onView(withText(startsWith("点击")))
+                .inRoot(withDecorView(not(is(mRule.getActivity().getWindow().getDecorView()))))
+                .check(matches(isDisplayed()));
     }
 
 
