@@ -1,17 +1,10 @@
 package com.lulu.androidtestdemo.espresso.utils;
 
-
-import android.content.Context;
-import android.support.annotation.Nullable;
 import android.support.test.espresso.IdlingResource;
-
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.concurrent.atomic.AtomicInteger;
-
 /**
  * Created by zhanglulu on 2018/3/8.
  */
-
 public class SimpleCountingIdlingResource implements IdlingResource {
 
     private final String mResourceName;
@@ -55,7 +48,6 @@ public class SimpleCountingIdlingResource implements IdlingResource {
                 resourceCallback.onTransitionToIdle();
             }
         }
-
         if (counterVal < 0) {
             //如果小于0，抛出异常
             throw new IllegalArgumentException("Counter has been corrupted!");

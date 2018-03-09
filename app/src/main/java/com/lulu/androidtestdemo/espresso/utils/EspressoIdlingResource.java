@@ -1,9 +1,5 @@
 package com.lulu.androidtestdemo.espresso.utils;
-
-
-import android.support.annotation.VisibleForTesting;
 import android.support.test.espresso.IdlingResource;
-
 /**
  * Created by zhanglulu on 2018/3/8.
  */

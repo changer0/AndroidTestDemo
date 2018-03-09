@@ -1,5 +1,4 @@
 package com.lulu.androidtestdemo.espresso;
-
 import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.VisibleForTesting;
@@ -12,7 +11,6 @@ import android.widget.Toast;
 
 import com.lulu.androidtestdemo.R;
 import com.lulu.androidtestdemo.espresso.utils.EspressoIdlingResource;
-
 public class TestActivity extends AppCompatActivity {
 
     private TextView text;
