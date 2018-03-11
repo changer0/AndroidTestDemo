@@ -7,7 +7,7 @@
 
     <EditText
         android:id="@+id/inputField"
-        android:text="Test"
+        android:hint="this is a hint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
