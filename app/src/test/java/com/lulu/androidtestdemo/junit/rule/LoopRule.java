@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.junit.rule;
 
 import org.junit.rules.TestRule;
 import org.junit.runner.Description;

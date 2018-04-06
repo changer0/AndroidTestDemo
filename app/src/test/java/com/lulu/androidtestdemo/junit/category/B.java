@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo.testcategory;
+package com.lulu.androidtestdemo.junit.category;
 
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
@@ -11,5 +11,4 @@ public class B {
     @Test
     public void c() {
     }
-
 }

@@ -1,6 +1,5 @@
 package com.lulu.androidtestdemo.instrumentation;
 
-import android.app.Application;
 import android.content.pm.PackageInfo;
 import android.test.ApplicationTestCase;
 import android.test.MoreAsserts;

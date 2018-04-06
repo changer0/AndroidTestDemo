@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.junit;
 
 import org.junit.runner.JUnitCore;
 import org.junit.runner.Result;

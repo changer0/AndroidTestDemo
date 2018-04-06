@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo.testcategory;
+package com.lulu.androidtestdemo.junit.category;
 
 import org.junit.experimental.categories.Categories;
 import org.junit.runner.RunWith;

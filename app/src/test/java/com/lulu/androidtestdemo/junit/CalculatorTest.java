@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.junit;
 
 import com.lulu.androidtestdemo.junit.testexample.Calculator;
 

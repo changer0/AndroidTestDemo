@@ -1,7 +1,6 @@
 package com.lulu.androidtestdemo.instrumentation;
 
 import android.content.Context;
-
 import java.io.FileOutputStream;
 
 /**

@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo.testcategory;
+package com.lulu.androidtestdemo.junit.category;
 
 /**
  * Created by lulu on 2018/1/25.

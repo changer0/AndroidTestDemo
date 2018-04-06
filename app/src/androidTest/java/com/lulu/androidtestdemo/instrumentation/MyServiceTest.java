@@ -37,5 +37,4 @@ public class MyServiceTest {
         MyService myService = ((MyService.MyLocalBinder) binder).getMyService();
         assertThat(myService.doSomethingToReturnTest(), is("Test"));
     }
-
 }

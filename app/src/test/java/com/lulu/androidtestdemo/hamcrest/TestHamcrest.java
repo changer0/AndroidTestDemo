@@ -5,6 +5,7 @@ import static org.junit.Assert.assertEquals;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
+import static org.junit.Assert.assertNotEquals;
 
 
 /**
@@ -29,9 +30,9 @@ public class TestHamcrest {
         assertThat(actual, is(equalTo(expected)));
 
         // JUnit 4 for not equals check
-        //assertNotEquals(expected, actual);
+        assertNotEquals(expected, actual);
         // Hamcrest for not equals check
-        //assertThat(actual, is(not(equalTo(expected))));
+        assertThat(actual, is(not(equalTo(expected))));
 
         assertThat("test",
                 anyOf(is("testing"), containsString("est")));

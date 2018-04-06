@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.junit;
 
 import org.junit.Assume;
 import org.junit.Test;
@@ -14,7 +14,6 @@ public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
         Assume.assumeFalse(System.getProperty("os.name").contains("Windows"));
-        System.out.println("测试输出");
         assertEquals(4, 2 + 2);
     }
 }

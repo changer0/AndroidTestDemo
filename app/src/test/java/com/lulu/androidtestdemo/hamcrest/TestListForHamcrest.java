@@ -161,4 +161,16 @@ public class TestListForHamcrest {
         assertThat(s, RegexMatcher.matchesRegex("a*b*a*"));
     }
 
+    @Test
+    public void testCombining() {
+        List<Integer> list = new ArrayList<>();
+        assertThat(list, both(hasSize(1)).and(contains(42)));
+    }
+
+    @Test
+    public void testCustomCombining() {
+        List<Integer> list = new ArrayList<>();
+        assertThat(list, MatcherCombinator.matches(hasSize(1)).and(contains(42)));
+    }
+
 }

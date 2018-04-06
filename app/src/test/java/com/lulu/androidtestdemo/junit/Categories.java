@@ -1,4 +1,4 @@
-package com.lulu.androidtestdemo;
+package com.lulu.androidtestdemo.junit;
 
 /**
  * Created by zhanglulu on 2018/1/24.

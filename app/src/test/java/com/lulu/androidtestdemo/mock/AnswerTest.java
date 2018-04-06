@@ -29,13 +29,10 @@ public class AnswerTest {
     @Test
     public final void callbackTest() {
         ApiService service = mock(ApiService.class);
-        when(service.login(any(Callback.class))).thenAnswer(new Answer<Object>() {
-            @Override
-            public Object answer(InvocationOnMock invocation) throws Throwable {
-                Callback callback = invocation.getArgument(0);
-                callback.notify("Success");
-                return "Test Result";
-            }
+        when(service.login(any(Callback.class))).thenAnswer(invocation -> {
+            Callback callback = invocation.getArgument(0);
+            callback.notify("Success");
+            return "Test Result";
         });
 
         String result = service.login(new Callback() {
