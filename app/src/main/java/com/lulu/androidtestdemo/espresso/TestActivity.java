@@ -58,5 +58,4 @@ public class TestActivity extends AppCompatActivity {
     public IdlingResource getIdlingResource() {
         return EspressoIdlingResource.getIdlingResource();
     }
-
 }

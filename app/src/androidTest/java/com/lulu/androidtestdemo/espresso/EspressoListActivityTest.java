@@ -56,7 +56,6 @@ public class EspressoListActivityTest {
                 .perform(click());
         onData(allOf(is(instanceOf(String.class)), is("测试 49")))
                 .perform(click());
-
     }
 
     @Test

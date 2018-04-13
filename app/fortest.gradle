@@ -22,7 +22,7 @@ dependencies {
 
 defaultConfig {
     //..... more stuff
-testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+//testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 }
 
 dependencies {
@@ -35,7 +35,7 @@ dependencies {
 
 android {
     /// more
-    testInstrumentationRunner "com.lulu.androidtestdemo.instrumentation.MockTestRunner"
+    //testInstrumentationRunner "com.lulu.androidtestdemo.instrumentation.MockTestRunner"
 }
 
 dependencies {

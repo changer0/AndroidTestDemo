@@ -2,6 +2,7 @@ package com.lulu.androidtestdemo.mock;
 
 import org.junit.Rule;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Captor;
 import org.mockito.junit.MockitoJUnit;
@@ -39,4 +40,5 @@ public class ArgumentCaptorTest {
         final List<String> capturedArgument = captor.getValue();
         assertThat(capturedArgument, hasItem("someElement"));
     }
+
 }
