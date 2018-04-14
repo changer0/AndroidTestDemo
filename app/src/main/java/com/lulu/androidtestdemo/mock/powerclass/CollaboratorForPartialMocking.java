@@ -5,15 +5,15 @@ package com.lulu.androidtestdemo.mock.powerclass;
  */
 public class CollaboratorForPartialMocking {
     public static String staticMethod() {
-        return "Hello Baeldung!";
+        return "Hello Lulu!";
     }
 
     public final String finalMethod() {
-        return "Hello Baeldung!";
+        return "Hello Lulu!";
     }
 
     private String privateMethod() {
-        return "Hello Baeldung!";
+        return "Hello Lulu!";
     }
 
     public String privateMethodCaller() {
