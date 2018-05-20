@@ -38,7 +38,5 @@ public class CalculatorTest {
         int sum = mCalculator.multiply(1, 2);
         assertEquals(2, sum);
        System.out.println("multiply执行了");
-
     }
-
 }

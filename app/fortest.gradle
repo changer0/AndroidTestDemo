@@ -68,3 +68,10 @@ dependencies {
     // add this for webview testing support
     androidTestCompile 'com.android.support.test.espresso:espresso-web:3.0.1'
 }
+
+android {
+    //...
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
