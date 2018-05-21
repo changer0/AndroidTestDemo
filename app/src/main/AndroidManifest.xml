@@ -30,13 +30,13 @@
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".espresso.EspressoTest1Activity"></activity>
+        <activity android:name=".espresso.EspressoTest1Activity" />
         <activity android:name=".espresso.EspressoTest2Activity" />
-        <activity android:name=".espresso.EspressoListActivity">
-
-        </activity>
-        <activity android:name=".espresso.TestConfigureActivity"></activity>
+        <activity android:name=".espresso.EspressoListActivity"></activity>
+        <activity android:name=".espresso.TestConfigureActivity" />
         <activity android:name=".espresso.TestActivity">
+        </activity>
+        <activity android:name=".robolectric.RoboActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
