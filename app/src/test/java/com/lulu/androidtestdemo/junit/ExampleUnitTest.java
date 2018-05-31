@@ -13,7 +13,7 @@ import static org.junit.Assert.assertEquals;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        Assume.assumeFalse(System.getProperty("os.name").contains("Windows"));
+        Assume.assumeTrue(System.getProperty("os.name").contains("Windows"));
         assertEquals(4, 2 + 2);
     }
 }
